@@ -48,24 +48,24 @@ function TaskFormPage() {
     return(
         <>
             <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-             <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
+             <div className='bg-Darkred max-w-md w-full p-10 rounded-md'>
                 <form onSubmit={onSubmit}>
                     <label htmlFor='title'> Title </label>
-                    <input  className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
+                    <input  className='w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2'
                      type='text' placeholder='Title' 
                      {...register("title")} autoFocus/>
 
 
                     <label htmlFor='description'> Description </label>
-                    <textarea className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
+                    <textarea className='w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2'
                      rows="3" placeholder='Description' {...register("description")} 
                      autoFocus></textarea>
 
                     <label htmlFor='date'> Date </label>
-                    <input className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
+                    <input className='w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2'
                      type='date' {...register('date')}/>
 
-                    <button className='bg-indigo-500 px-3 py-2 rounded-md'> Save </button>
+                    <button className='bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-3 py-2 rounded-md'> Save </button>
                 </form>
              </div>
             </div>
