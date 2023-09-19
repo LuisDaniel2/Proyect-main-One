@@ -1,0 +1,8 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+body {
+    background: rgb(43, 46, 74);
+    color: whitesmoke;
+}

@@ -1,0 +1,46 @@
+//Mostrar todas las bases de datos
+show dbs;
+
+//Create Database
+use db_producto;
+
+//Crear colecciones (Tablas):
+db.createCollection('productos');
+
+//Insertar (Forma 1) Registro:
+db.productos.insertOne({
+  "Nombre": 'Arroz',
+  "Precio": 1000,
+  "Descripcion": 'Descuento del 50%'
+});
+
+db.productos.insertOne({
+  "Nombre": 'Papa',
+  "Precio": 2000,
+  "Descripcion": 'Descuento del 50%',
+  "Cantidad": 2,
+  "UnidadMedida": 'Kg'
+});
+
+//Insertar (Forma 2) Registro:
+db.productos.insertMany([
+  {
+    "Nombre": 'Carne',
+    "Precio": 15000,
+    "Estado": 'Activo'
+  },
+  {
+    "Nombre": 'Lechuga',
+    "Precio": 4000,
+    "Estado": 'Inactivo'
+  }
+]);
+
+//Actualizar datos
+db.productos.update({Nombre: "Carne"}, {$set:{Nombre: "Pollo"}});
+
+//Eliminar Productos por id
+db.productos.deleteOne({_id: ObjectId("64dac8eb8657581d25495108")});
+
+//Encontrar todos los registros
+db.productos.find();
